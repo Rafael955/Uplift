@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Uplift.UI-D38966AB-F838-4BDD-8B88-A4AB427B77B0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Uplift.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
