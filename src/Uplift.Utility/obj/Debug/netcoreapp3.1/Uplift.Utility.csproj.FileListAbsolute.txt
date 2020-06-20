@@ -6,3 +6,4 @@ C:\Users\user\source\repos\Uplift\src\Uplift.Utility\obj\Debug\netcoreapp3.1\Upl
 C:\Users\user\source\repos\Uplift\src\Uplift.Utility\obj\Debug\netcoreapp3.1\Uplift.Utility.AssemblyInfo.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.Utility\obj\Debug\netcoreapp3.1\Uplift.Utility.dll
 C:\Users\user\source\repos\Uplift\src\Uplift.Utility\obj\Debug\netcoreapp3.1\Uplift.Utility.pdb
+C:\Users\user\source\repos\Uplift\src\Uplift.Utility\obj\Debug\netcoreapp3.1\Uplift.Utility.csprojAssemblyReference.cache

@@ -424,3 +424,5 @@ C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\staticwe
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.dll
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.pdb
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.genruntimeconfig.cache
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs

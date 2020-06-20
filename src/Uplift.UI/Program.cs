@@ -13,10 +13,10 @@ namespace Uplift.UI
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().Run();
         }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+       
+        public static IHostBuilder CreateWebHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
@@ -24,3 +24,6 @@ namespace Uplift.UI
                 });
     }
 }
+
+
+//https://stackoverflow.com/questions/45782446/unable-to-create-migrations-after-upgrading-to-asp-net-core-2-0
