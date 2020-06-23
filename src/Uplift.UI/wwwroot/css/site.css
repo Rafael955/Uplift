@@ -107,3 +107,8 @@ body {
     min-height: 38px;
     border-radius: 2px;
 }
+
+.btnDtSuccess {
+    cursor: pointer;
+    width: 100px;
+}
