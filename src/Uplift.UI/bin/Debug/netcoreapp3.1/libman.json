@@ -13,6 +13,10 @@
     {
       "library": "datatables@1.10.20",
       "destination": "wwwroot/datatables/"
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "wwwroot/toastr.js/"
     }
   ]
 }
