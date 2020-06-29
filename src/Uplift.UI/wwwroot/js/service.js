@@ -7,7 +7,7 @@ $(document).ready(function () {
 function loadDataTable() {
     DataTable = $('#tblData').DataTable({
         "ajax": {
-            "url": "/admin/service/GetAll",
+            "url": "/Admin/Service/GetAll",
             "type": "GET",
             "datatype": "json"
         },
@@ -15,16 +15,16 @@ function loadDataTable() {
             { "data": "name", "width": "25%" },
             { "data": "category.name", "width": "25%" },
             { "data": "price", "width": "15%" },
-            { "data": "frequency.FrequencyCount", "width": "15%" },
+            { "data": "frequency.name", "width": "15%" },
             {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                                <a href="/Admin/service/Upsert/${data}" class='btn btn-success text-white btnDtSuccess'>
+                                <a href="/Admin/Service/Upsert/${data}" class='btn btn-success text-white btnDtSuccess'>
                                     <i class="fas fa-edit"></i> Editar
                                 </a>
                                 &nbsp;
-                                <a onclick=Delete("/Admin/service/Delete/${data}") class='btn btn-danger text-white btnDtSuccess'>
+                                <a onclick=Delete("/Admin/Service/Delete/${data}") class='btn btn-danger text-white btnDtSuccess'>
                                     <i class="fas fa-trash"></i> Deletar
                                 </a>
                             </div>`;

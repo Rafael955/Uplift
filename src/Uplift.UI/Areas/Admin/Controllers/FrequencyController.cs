@@ -44,18 +44,28 @@ namespace Uplift.UI.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(frequency.Id == 0)
+                try
                 {
-                    _unitOfWork.Frequency.Add(frequency);
+                    if (frequency.Id == 0)
+                    {
+                        TempData["Upsert"] = "Added";
+                        _unitOfWork.Frequency.Add(frequency);
+                    }
+                    else
+                    {
+                        TempData["Upsert"] = "Updated";
+                        _unitOfWork.Frequency.Update(frequency);
+                    }
+
+                    _unitOfWork.Save();
+
+                    return RedirectToAction(nameof(Index));
                 }
-                else
+                catch
                 {
-                    _unitOfWork.Frequency.Update(frequency);
+                    TempData["Upsert"] = "Error";
+                    return RedirectToAction(nameof(Index));
                 }
-
-                _unitOfWork.Save();
-
-                return RedirectToAction(nameof(Index));
             }
 
             return View(frequency);
@@ -72,14 +82,14 @@ namespace Uplift.UI.Areas.Admin.Controllers
         [HttpDelete]
         public IActionResult Delete(int id)
         {
-            var objFromDb = _unitOfWork.Category.Get(id);
+            var objFromDb = _unitOfWork.Frequency.Get(id);
 
             if (objFromDb == null)
             {
                 return Json(new { success = false, message = "Erro ao deletar." });
             }
 
-            _unitOfWork.Category.Remove(objFromDb);
+            _unitOfWork.Frequency.Remove(objFromDb);
             _unitOfWork.Save();
 
             return Json(new { success = true, message = "Frequencia deletada com sucesso." });

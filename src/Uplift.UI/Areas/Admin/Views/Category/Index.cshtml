@@ -29,4 +29,17 @@
 
 @section Scripts {
     <script src="~/js/category.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ("@TempData["Upsert"]" == "Added") {
+                toastr.success("Categoria adicionada com sucesso.")
+            }
+            if ("@TempData["Upsert"]" == "Updated") {
+                toastr.success("Categoria atualizada com sucesso.")
+            }
+            if ("@TempData["Upsert"]" == "Error") {
+                toastr.error("Erro ao cadastrar/atualizar a categoria.")
+            }
+        });
+    </script>
 }

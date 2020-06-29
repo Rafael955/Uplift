@@ -392,9 +392,6 @@ C:\Users\user\source\repos\Uplift\src\Uplift.UI\bin\Debug\netcoreapp3.1\Uplift.M
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\bin\Debug\netcoreapp3.1\Uplift.DataAccess.pdb
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\bin\Debug\netcoreapp3.1\Uplift.Models.pdb
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.csprojAssemblyReference.cache
-C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.RazorAssemblyInfo.cache
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.RazorAssemblyInfo.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.AssemblyInfoInputs.cache
@@ -431,3 +428,8 @@ C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Vi
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_EditAndBackToListButton.cshtml.g.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Frequency\Index.cshtml.g.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Frequency\Upsert.cshtml.g.cs
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Service\Index.cshtml.g.cs
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Service\Upsert.cshtml.g.cs
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cache

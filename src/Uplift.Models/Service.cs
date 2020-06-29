@@ -16,6 +16,7 @@ namespace Uplift.Models
         public string Name { get; set; }
 
         [Required]
+        [Display(Name = "Preço")]
         public double Price { get; set; }
 
         [Display(Name = "Descrição")]
@@ -26,13 +27,16 @@ namespace Uplift.Models
         public string ImageUrl { get; set; }
 
         #region Entity Framework Mapping
+
         [Required]
+        [Display(Name = "Categoria")]
         public int CategoryId { get; set; }
 
         [ForeignKey("CategoryId")]
         public Category Category { get; set; }
 
         [Required]
+        [Display(Name = "Frequencia")]
         public int FrequencyId { get; set; }
 
         [ForeignKey("FrequencyId")]

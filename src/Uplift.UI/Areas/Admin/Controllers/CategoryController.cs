@@ -44,18 +44,28 @@ namespace Uplift.UI.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if(category.Id == 0)
+                try
                 {
-                    _unitOfWork.Category.Add(category);
+                    if (category.Id == 0)
+                    {
+                        TempData["Upsert"] = "Added";
+                        _unitOfWork.Category.Add(category);
+                    }
+                    else
+                    {
+                        TempData["Upsert"] = "Updated";
+                        _unitOfWork.Category.Update(category);
+                    }
+
+                    _unitOfWork.Save();
+
+                    return RedirectToAction(nameof(Index));
                 }
-                else
+                catch
                 {
-                    _unitOfWork.Category.Update(category);
+                    TempData["Upsert"] = "Error";
+                    return RedirectToAction(nameof(Index));
                 }
-                
-                _unitOfWork.Save();
-                
-                return RedirectToAction(nameof(Index));
             }
 
             return View(category);
