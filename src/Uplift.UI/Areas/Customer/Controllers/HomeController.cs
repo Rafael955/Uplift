@@ -23,6 +23,12 @@ namespace Uplift.UI.Areas.Customer.Controllers
             return View(LoadHomeViewModel());
         }
 
+        public IActionResult Details(int id)
+        {
+            var serviceFromDb = _unitOfWork.Service.GetFirstOrDefault(includeProperties: "Category,Frequency", filter: c => c.Id == id);
+            return View(serviceFromDb);
+        }
+
         public IActionResult Privacy()
         {
             return View();
@@ -39,7 +45,7 @@ namespace Uplift.UI.Areas.Customer.Controllers
             return new HomeViewModel
             {
                 CategoryList = _unitOfWork.Category.GetAll(),
-                ServiceList = _unitOfWork.Service.GetAll(includeProperties:"Frequency"),
+                ServiceList = _unitOfWork.Service.GetAll(includeProperties: "Frequency"),
             };
         }
     }

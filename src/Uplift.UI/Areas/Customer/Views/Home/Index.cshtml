@@ -23,7 +23,7 @@
                                             <div class="pl-3 text-white font-weight-bold">Preço por Serviço</div>
                                             <div class="pr-3 text-danger font-weight-bolder h5">R$@service.Price</div>
                                         </div>
-                                        <img src="@service.ImageUrl" class="card-img-top p-2 rounded" />
+                                        <img src="@service.ImageUrl" class="card-img-top p-2 rounded" style="max-height: 200px;"/>
                                         <div class="text-dark font-weight-bold text-center pb-2">@service.Frequency.Name</div>
                                         <a asp-action="Details" class="btn btn-success" asp-route-id="@service.Id">Detalhes</a>
                                     </div>

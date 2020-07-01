@@ -114,8 +114,6 @@ body {
 }
 
 .servicesCards {
-    display: flex;
-    justify-content: space-between;
     border: 2px solid #43ac6a; 
     border-radius: 5px; 
     background: url('/images/leafs.jpg') border-box;
