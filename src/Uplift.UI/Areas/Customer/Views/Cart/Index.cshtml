@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Minhas sessões</h1>
+
+<ul>
+@foreach(var item in ViewBag.Lista)
+{
+    <li>@item</li>
+}
+</ul>

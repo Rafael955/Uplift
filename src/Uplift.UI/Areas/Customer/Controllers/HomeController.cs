@@ -1,9 +1,13 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Uplift.DataAccess.Repository.IRepository;
 using Uplift.Models;
 using Uplift.Models.ViewModels;
+using Uplift.UI.Extensions;
+using Uplift.Utility;
 
 namespace Uplift.UI.Areas.Customer.Controllers
 {
@@ -26,7 +30,30 @@ namespace Uplift.UI.Areas.Customer.Controllers
         public IActionResult Details(int id)
         {
             var serviceFromDb = _unitOfWork.Service.GetFirstOrDefault(includeProperties: "Category,Frequency", filter: c => c.Id == id);
+
             return View(serviceFromDb);
+        }
+
+        public IActionResult AddToCart(int serviceId)
+        {
+            List<int> sessionList = new List<int>();
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString(SD.SessionCart))) // Se não tem nada na sessão..
+            {
+                sessionList.Add(serviceId); // adiciona id do serviço na Lista de Seção
+                HttpContext.Session.SetObject(SD.SessionCart, sessionList); // Adiciona a lista na sessão.
+            }
+            else
+            { // Se não...
+                sessionList = HttpContext.Session.GetObject<List<int>>(SD.SessionCart); // Recupera lista da sessão.
+
+                if (!sessionList.Contains(serviceId)) // Se lista de sessões não tiver o Id do serviço passado por parametro, então...
+                {
+                    sessionList.Add(serviceId); // Adiciona o novo Id na Lista...
+                    HttpContext.Session.SetObject(SD.SessionCart, sessionList); // E adiciona a lista novamente na session com o novo Id. 
+                }
+            }
+
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Privacy()
