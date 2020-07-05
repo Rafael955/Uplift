@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using Uplift.DataAccess.Mapping;
 using Uplift.Models;
 
 namespace Uplift.DataAccess.Data
@@ -19,5 +18,12 @@ namespace Uplift.DataAccess.Data
         public DbSet<Service> Services { get; set; }
         public DbSet<OrderHeader> OrdersHeaders { get; set; }
         public DbSet<OrderDetails> OrdersDetails { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            base.OnModelCreating(builder);
+        }
     }
 }

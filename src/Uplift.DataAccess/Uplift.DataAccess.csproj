@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200705015550_AddCategoryMapping.cs" />
+    <Compile Remove="Migrations\20200705015550_AddCategoryMapping.Designer.cs" />
+    <Compile Remove="Migrations\20200705041045_AddModelsMappings.cs" />
+    <Compile Remove="Migrations\20200705041045_AddModelsMappings.Designer.cs" />
+    <Compile Remove="Migrations\20200705041228_AddModelsMappings.cs" />
+    <Compile Remove="Migrations\20200705041228_AddModelsMappings.Designer.cs" />
+    <Compile Remove="Migrations\20200705041432_AddModelsMappings.cs" />
+    <Compile Remove="Migrations\20200705041432_AddModelsMappings.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
