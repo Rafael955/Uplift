@@ -34,4 +34,4 @@ namespace Uplift.UI.Extensions
         }
     }
 }
-// Classe simples com métodos de extensão aonde armazenamos um objeto o serializando e recuperamos o mesmo deserializando ele.
+// Classe simples com métodos de extensão aonde armazenamos um objeto session o serializando e recuperamos o mesmo deserializando ele.

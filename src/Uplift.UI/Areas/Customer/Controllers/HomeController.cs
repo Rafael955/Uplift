@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Uplift.DataAccess.Repository.IRepository;
 using Uplift.Models;
 using Uplift.Models.ViewModels;
@@ -37,9 +36,9 @@ namespace Uplift.UI.Areas.Customer.Controllers
         public IActionResult AddToCart(int serviceId)
         {
             List<int> sessionList = new List<int>();
-            if (string.IsNullOrEmpty(HttpContext.Session.GetString(SD.SessionCart))) // Se não tem nada na sessão..
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString(SD.SessionCart))) // Se não tem nada na sessão...
             {
-                sessionList.Add(serviceId); // adiciona id do serviço na Lista de Seção
+                sessionList.Add(serviceId); // adiciona Id do serviço na Lista de Seção.
                 HttpContext.Session.SetObject(SD.SessionCart, sessionList); // Adiciona a lista na sessão.
             }
             else

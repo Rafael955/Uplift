@@ -1,14 +1,15 @@
-﻿
+﻿@model IEnumerable<Service>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Minhas sessões</h1>
+<h1>Meus Items no carrinho</h1>
 
 <ul>
-@foreach(var item in ViewBag.Lista)
-{
-    <li>@item</li>
-}
+    @foreach (var item in Model)
+    {
+        <li>Id do Serviço: @item.Id</li>
+        <li>Nome: @item.Name</li>
+    }
 </ul>
