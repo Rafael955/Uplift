@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using Uplift.UI.Configuration;
+using Westwind.AspNetCore.LiveReload;
 
 namespace Uplift.UI
 {
@@ -19,6 +20,8 @@ namespace Uplift.UI
         public void ConfigureServices(IServiceCollection services)
         {
             services.RegisterServices(Configuration);
+
+            services.AddMvcConfiguration();
 
             services.AddIdentityConfiguration();
 

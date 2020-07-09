@@ -7,6 +7,7 @@ using System;
 using Uplift.DataAccess.Data;
 using Uplift.DataAccess.Repository;
 using Uplift.DataAccess.Repository.IRepository;
+using Westwind.AspNetCore.LiveReload;
 
 namespace Uplift.UI.Configuration
 {

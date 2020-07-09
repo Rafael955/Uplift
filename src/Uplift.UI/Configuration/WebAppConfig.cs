@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Westwind.AspNetCore.LiveReload;
 
 namespace Uplift.UI.Configuration
 {
@@ -16,6 +17,8 @@ namespace Uplift.UI.Configuration
             services.AddControllersWithViews()
                 .AddNewtonsoftJson()
                 .AddRazorRuntimeCompilation();
+
+            services.AddLiveReload();
         }
 
         public static void UseMvcConfiguration(this IApplicationBuilder app, IWebHostEnvironment env)
@@ -31,7 +34,11 @@ namespace Uplift.UI.Configuration
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseLiveReload();
+
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseSession();

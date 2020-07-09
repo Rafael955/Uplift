@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Uplift.DataAccess.Repository.IRepository;
 using Uplift.Models;
+using Uplift.Models.ViewModels;
 using Uplift.UI.Extensions;
 using Uplift.Utility;
 
@@ -14,33 +15,34 @@ namespace Uplift.UI.Areas.Customer.Controllers
     [Area("Customer")]
     public class CartController : Controller
     {
-        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IUnitOfWork _unitOfWork;
-        private List<Service> serviceList;
+
+        [BindProperty]
+        public CartViewModel CartVM { get; set; }
 
         public CartController(IHttpContextAccessor httpContextAccessor, IUnitOfWork unitOfWork)
         {
-            _httpContextAccessor = httpContextAccessor;
             _unitOfWork = unitOfWork;
-            serviceList = new List<Service>();
+            CartVM = new CartViewModel()
+            {
+                OrderHeader = new OrderHeader(),
+                ServiceList = new List<Service>()
+            };
         }
 
         public IActionResult Index()
         {
-            return View(GetShoppingCartItems());
-        }
-
-        private IEnumerable<Service> GetShoppingCartItems()
-        {
-            List<int> shoppingCartListIds = _httpContextAccessor.HttpContext.Session.GetObject<List<int>>(SD.SessionCart);
-
-            foreach (var id in shoppingCartListIds)
+            if (HttpContext.Session.GetObject<List<int>>(SD.SessionCart) != null)
             {
-                var cartItem = _unitOfWork.Service.GetFirstOrDefault(filter: c => c.Id == id);
-                serviceList.Add(cartItem);
+                List<int> sessionList = new List<int>();
+                sessionList = HttpContext.Session.GetObject<List<int>>(SD.SessionCart);
+                foreach (var serviceId in sessionList)
+                {
+                    CartVM.ServiceList.Add(_unitOfWork.Service.GetFirstOrDefault(u => u.Id == serviceId, includeProperties: "Frequency,Category"));
+                }
             }
 
-            return serviceList;
+            return View(CartVM);
         }
     }
 }

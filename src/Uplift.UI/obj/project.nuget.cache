@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hvmwJzQCCtcOQ71qEbtNcZQW4jX5zm6PAIz9N4VwgPEZKperdf4w1RrBclj5D2D2+e+HaxcjWx8ecwhkoap9ug==",
+  "dgSpecHash": "yBYNEUt+iTdBA8T7gKy689xn2M99TBZ0Je58s/e94iOtB12sFhJNnf5P5rM81q0gpjs/mxBKu55z3dN9hfFlOA==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\Uplift\\src\\Uplift.UI\\Uplift.UI.csproj",
   "expectedPackageFiles": [
@@ -216,7 +216,8 @@
     "C:\\Users\\user\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\westwind.aspnetcore.livereload\\0.2.4.2\\westwind.aspnetcore.livereload.0.2.4.2.nupkg.sha512"
   ],
   "logs": []
 }

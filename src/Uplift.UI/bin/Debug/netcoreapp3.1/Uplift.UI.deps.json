@@ -35,6 +35,7 @@
           "Uplift.DataAccess": "1.0.0",
           "Uplift.Models": "1.0.0",
           "Uplift.Utility": "1.0.0",
+          "Westwind.AspnetCore.LiveReload": "0.2.4.2",
           "Microsoft.AspNetCore.Antiforgery.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -2640,6 +2641,17 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "Westwind.AspnetCore.LiveReload/0.2.4.2": {
+        "runtime": {
+          "lib/netcoreapp3.1/Westwind.AspnetCore.LiveReload.dll": {
+            "assemblyVersion": "0.2.4.2",
+            "fileVersion": "0.2.4.2"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Westwind.AspnetCore.LiveReload.dll": {}
         }
       },
       "Uplift.DataAccess/1.0.0": {
@@ -5694,6 +5706,13 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Westwind.AspnetCore.LiveReload/0.2.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yb8CRDiKIUZHQVDP7IAwteQJuzbENp4E9YYtBw2Eb1RngrNiokRbjxXL8vbedTk9lkL9/ptFsvvcocyY2hyefw==",
+      "path": "westwind.aspnetcore.livereload/0.2.4.2",
+      "hashPath": "westwind.aspnetcore.livereload.0.2.4.2.nupkg.sha512"
     },
     "Uplift.DataAccess/1.0.0": {
       "type": "project",

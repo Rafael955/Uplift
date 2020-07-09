@@ -430,10 +430,11 @@ C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Ar
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Frequency\Upsert.cshtml.g.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Service\Index.cshtml.g.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Service\Upsert.cshtml.g.cs
-C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Home\Details.cshtml.g.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\bin\Debug\netcoreapp3.1\Uplift.Utility.dll
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\bin\Debug\netcoreapp3.1\Uplift.Utility.pdb
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\Index.cshtml.g.cs
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\bin\Debug\netcoreapp3.1\Westwind.AspnetCore.LiveReload.dll
