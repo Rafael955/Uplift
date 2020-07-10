@@ -14,7 +14,6 @@ namespace Uplift.UI.Areas.Customer.Controllers
     public class HomeController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        private HomeViewModel HomeViewModel;
 
         public HomeController(IUnitOfWork unitOfWork)
         {
