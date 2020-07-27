@@ -8,5 +8,8 @@ namespace Uplift.Utility
     {
         // Utilizaremos a variável SessionCart ao invés de poluir o código com uma magic string "Cart" o que seria uma má prática. 
         public const string SessionCart = "Cart";
+        public const string StatusSubmitted = "Submitted";
+        public const string StatusApproved = "Approved";
+        public const string StatusRejected = "Rejected";
     }
 }

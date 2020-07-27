@@ -23,11 +23,7 @@ namespace Uplift.UI.Areas.Customer.Controllers
         public CartController(IHttpContextAccessor httpContextAccessor, IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            CartVM = new CartViewModel()
-            {
-                OrderHeader = new OrderHeader(),
-                ServiceList = new List<Service>()
-            };
+            LoadCartViewModel();
         }
 
         public IActionResult Index()
@@ -60,6 +56,62 @@ namespace Uplift.UI.Areas.Customer.Controllers
             return View(CartVM);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ActionName("Summary")]
+        public IActionResult SummaryPOST()
+        {
+            LoadCartViewModel();
+            // Se a sessão estiver valida...
+            if (HttpContext.Session.GetObject<List<int>>(SD.SessionCart) != null)
+            {
+                List<int> sessionList = new List<int>();
+                sessionList = HttpContext.Session.GetObject<List<int>>(SD.SessionCart);
+
+                foreach (var serviceId in sessionList)
+                {
+                    CartVM.ServiceList.Add(_unitOfWork.Service.Get(serviceId));
+                }
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(CartVM);
+            }
+            else
+            {
+                CartVM.OrderHeader.OrderDate = DateTime.Now;
+                CartVM.OrderHeader.Status = SD.StatusSubmitted;
+                CartVM.OrderHeader.ServiceCount = CartVM.ServiceList.Count;
+                _unitOfWork.OrderHeader.Add(CartVM.OrderHeader);
+                _unitOfWork.Save();
+
+                foreach (var item in CartVM.ServiceList)
+                {
+                    OrderDetails orderDetails = new OrderDetails
+                    {
+                        ServiceId = item.Id,
+                        OrderHeaderId = CartVM.OrderHeader.Id,
+                        ServiceName = item.Name,
+                        Price = item.Price
+                    };
+
+                    _unitOfWork.OrderDetails.Add(orderDetails);
+                }
+
+                _unitOfWork.Save();
+
+                HttpContext.Session.SetObject(SD.SessionCart, new List<int>());
+                return RedirectToAction("OrderConfirmation", "Cart", new { id = CartVM.OrderHeader.Id });
+            }
+
+        }
+
+        public IActionResult OrderConfirmation(int id)
+        {
+            return View(id);
+        }
+
         public IActionResult Remove(int serviceId)
         {
             List<int> sessionList = new List<int>();
@@ -68,6 +120,13 @@ namespace Uplift.UI.Areas.Customer.Controllers
             HttpContext.Session.SetObject(SD.SessionCart, sessionList);
 
             return RedirectToAction(nameof(Index));
+        }
+
+        private void LoadCartViewModel()
+        {
+            CartVM = CartVM == null ? new CartViewModel() : CartVM;
+            CartVM.OrderHeader = CartVM.OrderHeader == null ? new OrderHeader() : CartVM.OrderHeader;
+            CartVM.ServiceList = CartVM.ServiceList == null ? new List<Service>() : CartVM.ServiceList;
         }
     }
 }

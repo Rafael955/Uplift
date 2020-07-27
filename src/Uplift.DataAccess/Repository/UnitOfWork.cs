@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Uplift.DataAccess.Data;
+﻿using Uplift.DataAccess.Data;
 using Uplift.DataAccess.Repository.IRepository;
 
 namespace Uplift.DataAccess.Repository

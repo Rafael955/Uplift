@@ -40,7 +40,9 @@ namespace Uplift.DataAccess.Repository
             // propriedades include serão separadas por vírgula
             if(includeProperties != null)
             {
-                foreach (var includeProperty in includeProperties.Split(new char[] { ','}, StringSplitOptions.RemoveEmptyEntries))
+                includeProperties = includeProperties.Replace(" ", "");
+
+                foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(includeProperty);
                 }
@@ -64,6 +66,8 @@ namespace Uplift.DataAccess.Repository
             // propriedades include serão separadas por vírgula
             if (includeProperties != null)
             {
+                includeProperties = includeProperties.Replace(" ","");
+
                 foreach (var includeProperty in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(includeProperty);

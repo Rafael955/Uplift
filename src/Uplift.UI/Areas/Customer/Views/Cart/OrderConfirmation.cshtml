@@ -1,0 +1,20 @@
+﻿@model int
+@{
+    ViewData["Title"] = "Order Confirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container row">
+    <div class="col-12 text-center">
+        <h1 class="text-primary text-center">Pedido Solicitado Enviado</h1><br />
+        <img src="~/images/Sunshine-leaves-beech-tree.jpg" alt="leaves-image" style="width:50%;" />
+    </div>
+    <div class="col-12 text-center" style="color:maroon">
+        <br />
+        Obrigado por solicitar nossos serviços online!
+        Recebemos o seu pedido e nosso time irá entrar em contato em breve!
+        <br />
+        O Número do seu Pedido é: @Model
+    </div>
+</div>
+

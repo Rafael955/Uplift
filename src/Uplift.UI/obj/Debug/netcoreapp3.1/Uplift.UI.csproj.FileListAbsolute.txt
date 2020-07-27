@@ -439,3 +439,4 @@ C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.U
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\bin\Debug\netcoreapp3.1\Westwind.AspnetCore.LiveReload.dll
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\Summary.cshtml.g.cs
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\OrderConfirmation.cshtml.g.cs
