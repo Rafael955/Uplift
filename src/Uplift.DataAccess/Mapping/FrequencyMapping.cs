@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Uplift.Models;
+using Uplift.Models.ValueObjects;
 
 namespace Uplift.DataAccess.Mapping
 {
@@ -13,8 +14,10 @@ namespace Uplift.DataAccess.Mapping
         {
             builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.Name)
-                .HasMaxLength(255);
+            builder.OwnsOne(p => p.Name)
+                          .Property(p => p.name)
+                          .HasColumnName("Name")
+                          .HasMaxLength(255);
 
             builder.ToTable("Frequencies");
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using Uplift.Models.ValueObjects;
 
 namespace Uplift.Models
 {
@@ -13,7 +14,7 @@ namespace Uplift.Models
 
         [Required]
         [Display(Name = "Nome do Serviço")]
-        public string Name { get; set; }
+        public Name Name { get; set; }
 
         [Required]
         [Display(Name = "Preço")]

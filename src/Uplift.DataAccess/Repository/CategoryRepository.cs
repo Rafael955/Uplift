@@ -23,7 +23,7 @@ namespace Uplift.DataAccess.Repository
         {
             return _db.Categories.Select(x => new SelectListItem() 
             { 
-                Text = x.Name,
+                Text = x.Name.ToString(),
                 Value = x.Id.ToString()
             });
         }

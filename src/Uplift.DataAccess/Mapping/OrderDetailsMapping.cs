@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Uplift.Models;
+using Uplift.Models.ValueObjects;
 
 namespace Uplift.DataAccess.Mapping
 {
@@ -13,9 +14,11 @@ namespace Uplift.DataAccess.Mapping
         {
             builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.ServiceName)
-                .HasMaxLength(255);
-
+            builder.OwnsOne(p => p.ServiceName)
+              .Property(p => p.name)
+              .HasColumnName("ServiceName")
+              .HasMaxLength(255);
+            
             builder.ToTable("OrdersDetails");
         }
     }

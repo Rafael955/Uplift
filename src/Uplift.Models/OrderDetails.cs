@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using Uplift.Models.ValueObjects;
 
 namespace Uplift.Models
 {
@@ -23,7 +24,7 @@ namespace Uplift.Models
         public Service Service { get; set; }
 
         [Required]
-        public string ServiceName { get; set; }
+        public Name ServiceName { get; set; }
 
         [Required]
         public double Price { get; set; }

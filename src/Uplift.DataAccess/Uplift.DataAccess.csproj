@@ -13,6 +13,8 @@
     <Compile Remove="Migrations\20200705041228_AddModelsMappings.Designer.cs" />
     <Compile Remove="Migrations\20200705041432_AddModelsMappings.cs" />
     <Compile Remove="Migrations\20200705041432_AddModelsMappings.Designer.cs" />
+    <Compile Remove="Migrations\20200801161856_Add Value Object.cs" />
+    <Compile Remove="Migrations\20200801161856_Add Value Object.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
