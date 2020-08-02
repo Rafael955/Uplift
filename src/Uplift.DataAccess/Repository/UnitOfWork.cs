@@ -15,6 +15,7 @@ namespace Uplift.DataAccess.Repository
             Service = new ServiceRepository(_db);
             OrderHeader = new OrderHeaderRepository(_db);
             OrderDetails = new OrderDetailsRepository(_db);
+            User = new UserRepository(_db);
         }
 
         public ICategoryRepository Category { get; private set;  }
@@ -27,6 +28,7 @@ namespace Uplift.DataAccess.Repository
 
         public IOrderDetailsRepository OrderDetails { get; private set; }
 
+        public IUserRepository User { get; private set; }
 
         public void Save()
         {
