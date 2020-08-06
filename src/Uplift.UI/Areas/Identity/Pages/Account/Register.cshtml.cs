@@ -67,7 +67,7 @@ namespace Uplift.UI.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
-            public Name Name { get; set; }
+            public string Name { get; set; }
 
             [Display(Name = "Street Address")]
             public string StreetAddress { get; set; }
@@ -93,20 +93,20 @@ namespace Uplift.UI.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser 
-                { 
-                    UserName = Input.Email, 
-                    Email = Input.Email ,
-                    Name = Input.Name,
+                var user = new ApplicationUser
+                {
+                    UserName = Input.Email,
+                    Email = Input.Email,
+                    Name = new Name(Input.Name),
                     City = Input.City,
                     State = Input.State,
                     StreetAddress = Input.StreetAddress,
                     PostalCode = Input.PostalCode,
                     PhoneNumber = Input.PhoneNumber
                 };
-                
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
-                
+
                 if (result.Succeeded)
                 {
                     if (!await _roleManager.RoleExistsAsync(SD.Admin))
@@ -117,13 +117,13 @@ namespace Uplift.UI.Areas.Identity.Pages.Account
 
                     string role = Request.Form["rdUserRole"].ToString(); // Pega a role selecionada
 
-                    if(role == SD.Admin)
+                    if (role == SD.Admin)
                     {
                         await _userManager.AddToRoleAsync(user, SD.Admin);
                     }
                     else
                     {
-                        if(role == SD.Manager)
+                        if (role == SD.Manager)
                         {
                             await _userManager.AddToRoleAsync(user, SD.Manager);
                         }
@@ -142,15 +142,15 @@ namespace Uplift.UI.Areas.Identity.Pages.Account
                     //await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                     //    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                    {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
-                    }
-                    else
-                    {
-                        //await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
-                    }
+                    //if (_userManager.Options.SignIn.RequireConfirmedAccount)
+                    //{
+                    //    return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                    //}
+                    //else
+                    //{
+                    //await _signInManager.SignInAsync(user, isPersistent: false);
+                    return LocalRedirect(returnUrl);
+                    //}
                 }
                 foreach (var error in result.Errors)
                 {

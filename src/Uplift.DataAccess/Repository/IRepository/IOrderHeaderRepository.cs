@@ -8,5 +8,6 @@ namespace Uplift.DataAccess.Repository.IRepository
     public interface IOrderHeaderRepository : IRepository<OrderHeader>
     {
         void Update(OrderHeader order);
+        void ChangeOrderStatus(int orderHeaderId, string status);
     }
 }

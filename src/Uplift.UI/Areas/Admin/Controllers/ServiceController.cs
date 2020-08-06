@@ -36,6 +36,7 @@ namespace Uplift.UI.Areas.Admin.Controllers
         {
             if (id != null)
             {
+                ServiceViewModel = LoadServiceViewModel();
                 ServiceViewModel.Service = _unitOfWork.Service.Get(id.GetValueOrDefault());
                 return View(ServiceViewModel);
             }

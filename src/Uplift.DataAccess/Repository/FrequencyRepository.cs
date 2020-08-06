@@ -22,7 +22,7 @@ namespace Uplift.DataAccess.Repository
         {
             return _db.Frequencies.Select(x => new SelectListItem()
             {
-                Text = x.Name.ToString(),
+                Text = x.Name.name,
                 Value = x.Id.ToString()
             });
         }

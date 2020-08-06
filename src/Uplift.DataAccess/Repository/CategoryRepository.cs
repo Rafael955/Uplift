@@ -21,11 +21,13 @@ namespace Uplift.DataAccess.Repository
 
         public IEnumerable<SelectListItem> GetCategoryListForDropDown()
         {
-            return _db.Categories.Select(x => new SelectListItem() 
+            var query = _db.Categories.Select(x => new SelectListItem() 
             { 
-                Text = x.Name.ToString(),
+                Text = x.Name.name,
                 Value = x.Id.ToString()
             });
+
+            return query;
         }
 
         public void Update(Category category)

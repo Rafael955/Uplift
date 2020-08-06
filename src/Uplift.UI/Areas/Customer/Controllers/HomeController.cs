@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,6 +20,7 @@ namespace Uplift.UI.Areas.Customer.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+
 
         public IActionResult Index()
         {

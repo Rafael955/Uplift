@@ -12,17 +12,17 @@ function loadDataTable() {
             "datatype": "json"
         },
         "columns": [
-            { "data": "name", "width": "50%" },
+            { "data": "name.name", "width": "50%" },
             { "data": "displayOrder", "width": "20%" },
             {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                                <a href="/Admin/category/Upsert/${data}" class='btn btn-success text-white btnDtSuccess'>
+                                <a href="/Admin/Category/Upsert/${data}" class='btn btn-success text-white btnDtSuccess'>
                                     <i class="fas fa-edit"></i> Editar
                                 </a>
                                 &nbsp;
-                                <a onclick=Delete("/Admin/category/Delete/${data}") class='btn btn-danger text-white btnDtSuccess'>
+                                <a onclick=Delete("/Admin/Category/Delete/${data}") class='btn btn-danger text-white btnDtSuccess'>
                                     <i class="fas fa-trash"></i> Deletar
                                 </a>
                             </div>`;

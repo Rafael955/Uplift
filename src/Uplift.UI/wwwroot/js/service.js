@@ -12,10 +12,10 @@ function loadDataTable() {
             "datatype": "json"
         },
         "columns": [
-            { "data": "name", "width": "25%" },
-            { "data": "category.name", "width": "25%" },
-            { "data": "price", "width": "15%" },
-            { "data": "frequency.name", "width": "15%" },
+            { "data": "name.name", "width": "20%" },
+            { "data": "category.name.name", "width": "20%" },
+            { "data": "price", "width": "5%" },
+            { "data": "frequency.name.name", "width": "25%" },
             {
                 "data": "id",
                 "render": function (data) {
@@ -29,7 +29,7 @@ function loadDataTable() {
                                 </a>
                             </div>`;
                 },
-                "width": "20%"
+                "width": "30%"
             }
         ],
         "language": {
