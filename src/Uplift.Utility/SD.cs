@@ -12,7 +12,7 @@ namespace Uplift.Utility
         public const string StatusApproved = "Aprovado";
         public const string StatusRejected = "Rejeitado";
 
-        public const string Admin = "Admin";
-        public const string Manager = "Manager";
+        public const string Admin = "Administrador";
+        public const string Manager = "Gerente";
     }
 }

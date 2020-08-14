@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Uplift.DataAccess.Repository;
 using Uplift.DataAccess.Repository.IRepository;
+using Uplift.Models.ViewModels;
 using Uplift.Utility;
 
 namespace Uplift.UI.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -22,6 +25,45 @@ namespace Uplift.UI.Areas.Admin.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult Details(int id)
+        {
+            OrderViewModel orderVM = new OrderViewModel()
+            {
+                OrderHeader = _unitOfWork.OrderHeader.Get(id),
+                OrderDetails = _unitOfWork.OrderDetails.GetAll(o => o.OrderHeaderId == id)
+            };
+
+            return View(orderVM);
+        }
+
+        public IActionResult Approve(int id)
+        {
+            var orderFromDb = _unitOfWork.OrderHeader.Get(id);
+
+            if(orderFromDb == null)
+            {
+                return NotFound();
+            }
+
+            _unitOfWork.OrderHeader.ChangeOrderStatus(id, SD.StatusApproved);
+
+            return View(nameof(Index));
+        }
+
+        public IActionResult Reject(int id)
+        {
+            var orderFromDb = _unitOfWork.OrderHeader.Get(id);
+
+            if (orderFromDb == null)
+            {
+                return NotFound();
+            }
+
+            _unitOfWork.OrderHeader.ChangeOrderStatus(id, SD.StatusRejected);
+
+            return View(nameof(Index));
         }
 
         #region API Calls 

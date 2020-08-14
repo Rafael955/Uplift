@@ -19,7 +19,7 @@ using Uplift.Utility;
 
 namespace Uplift.UI.Areas.Identity.Pages.Account
 {
-    [AllowAnonymous]
+    [Authorize]
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
@@ -59,25 +59,30 @@ namespace Uplift.UI.Areas.Identity.Pages.Account
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Senha")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
+            [Display(Name = "Confirmar senha")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
 
+            [Display(Name = "Nome")]
             public string Name { get; set; }
 
-            [Display(Name = "Street Address")]
+            [Display(Name = "Endereço")]
             public string StreetAddress { get; set; }
+
+            [Display(Name = "Cidade")]
             public string City { get; set; }
+
+            [Display(Name = "Estado")]
             public string State { get; set; }
 
-            [Display(Name = "Postal Code")]
+            [Display(Name = "CEP")]
             public string PostalCode { get; set; }
 
-            [Display(Name = "Phone Number")]
+            [Display(Name = "Telefone")]
             public string PhoneNumber { get; set; }
         }
 

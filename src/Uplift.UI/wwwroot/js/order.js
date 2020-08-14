@@ -5,10 +5,10 @@ $(document).ready(function () {
     if (url.includes("approved")) {
         loadDataTable("GetAllApprovedOrders");
     } else {
-        if (url.includes("all")) {
-            loadDataTable("GetAllOrders");
-        } else {
+        if (url.includes("pending")) {
             loadDataTable("GetAllPendingOrders");
+        } else {
+            loadDataTable("GetAllOrders");
         }
     }
 });
@@ -30,7 +30,7 @@ function loadDataTable(url) {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                                <a href="/Admin/Orders/Details/${data}" class='btn btn-success text-white btnDtSuccess'>
+                                <a href="/Admin/Order/Details/${data}" class='btn btn-success text-white btnDtSuccess'>
                                     <i class="fas fa-edit"></i> Detalhes
                                 </a>`
                 },

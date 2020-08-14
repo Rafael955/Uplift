@@ -481,3 +481,4 @@ C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Ar
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Order\Index.cshtml.g.cs
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Order\Details.cshtml.g.cs
