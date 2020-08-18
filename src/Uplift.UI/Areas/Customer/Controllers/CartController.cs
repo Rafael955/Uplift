@@ -76,7 +76,7 @@ namespace Uplift.UI.Areas.Customer.Controllers
 
             if (!ModelState.IsValid)
             {
-                return View(CartVM);
+                return RedirectToAction(nameof(Summary));
             }
             else
             {

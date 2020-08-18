@@ -11,5 +11,5 @@ C:\Users\user\source\repos\Uplift\src\Uplift.DataAccess\obj\Debug\netcoreapp3.1\
 C:\Users\user\source\repos\Uplift\src\Uplift.DataAccess\obj\Debug\netcoreapp3.1\Uplift.DataAccess.csproj.CopyComplete
 C:\Users\user\source\repos\Uplift\src\Uplift.DataAccess\bin\Debug\netcoreapp3.1\Uplift.DataAccess.runtimeconfig.json
 C:\Users\user\source\repos\Uplift\src\Uplift.DataAccess\bin\Debug\netcoreapp3.1\Uplift.DataAccess.runtimeconfig.dev.json
-C:\Users\user\source\repos\Uplift\src\Uplift.DataAccess\obj\Debug\netcoreapp3.1\Uplift.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\Uplift\src\Uplift.DataAccess\obj\Debug\netcoreapp3.1\Uplift.DataAccess.genruntimeconfig.cache
+C:\Users\user\source\repos\Uplift\src\Uplift.DataAccess\obj\Debug\netcoreapp3.1\Uplift.DataAccess.csproj.CoreCompileInputs.cache
