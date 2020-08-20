@@ -19,6 +19,7 @@ namespace Uplift.DataAccess.Data
         public DbSet<OrderHeader> OrdersHeaders { get; set; }
         public DbSet<OrderDetails> OrdersDetails { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<WebImages> WebImages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

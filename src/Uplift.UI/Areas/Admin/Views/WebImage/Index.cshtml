@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Lista de Imagens";
+}
+
+<div class="border backgroundWhite">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">Lista de Imagens</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="Upsert" class="btn btn-primary">
+                <i class="fas fa-plus"></i> &nbsp; Upload de Nova Imagem
+            </a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <table id="tblData" class="table table-striped table-bordered" style="width: 100%">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/js/webImage.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ("@TempData["Upsert"]" == "Added") {
+                toastr.success("Imagem adicionada com sucesso.")
+            }
+            if ("@TempData["Upsert"]" == "Error") {
+                toastr.error("Erro ao cadastrar/atualizar a imagem.")
+            }
+        });
+    </script>
+}

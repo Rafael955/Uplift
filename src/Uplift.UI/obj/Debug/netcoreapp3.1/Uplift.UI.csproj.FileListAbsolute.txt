@@ -483,3 +483,4 @@ C:\Users\user\source\repos\Uplift\src\Uplift.UI\bin\Debug\netcoreapp3.1\Dapper.d
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Uplift.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\source\repos\Uplift\src\Uplift.UI\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\WebImage\Index.cshtml.g.cs
